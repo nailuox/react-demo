@@ -1,0 +1,32 @@
+.leftSide {
+  background: #000e1b;
+  // box-shadow: 3px 0px 5px #001529;
+
+  .menu {
+    margin-left: 10px;
+  }
+}
+
+:global(.ant-menu-dark) {
+
+  &.ant-menu-root {
+    background: #000e1b;
+
+    .ant-menu-sub {
+      background: #001529;
+    }
+  }
+}
+
+:global(.ant-menu-submenu-popup) {
+  z-index: 1002 !important;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  letter-spacing: 3px;
+}
