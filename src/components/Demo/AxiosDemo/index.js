@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Row, Table, Spin } from 'antd'
+import { Col, Row, Table, Spin, message } from 'antd'
 
 import CustomBreadcrumb from '@common/CustomBreadcrumb'
 import TypingCard from '@common/TypingCard'
@@ -62,8 +62,14 @@ class index extends Component {
   }
 
   requestData = async () => {
-    const res = await Axios.get('/api/axios.json')
-    const users = res.data ? res.data : []
+    let users = []
+    try {
+      const res = await Axios.get('/api/axios1.json')
+      users = res.data ? res.data : []
+    } catch (e) {
+      message.error('请求数据出错：' + e)
+    }
+
     this.setState({ loading: false, users })
   }
 }

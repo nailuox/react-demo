@@ -4,6 +4,7 @@ import ReconnectingWebSocket from 'reconnectingwebsocket'
 
 import CustomBreadcrumb from '@common/CustomBreadcrumb'
 import TypingCard from '@common/TypingCard'
+import AppHistory from '@common/AppHistory'
 import styles from './index.module.less'
 
 const { Column } = Table
@@ -68,9 +69,11 @@ class index extends Component {
       )
     } catch (e) {
       message.error('websocket连接出错：' + e)
+      setTimeout(() => {
+        AppHistory.goback()
+      }, 2000)
     }
-
-    console.log(this.ws)
+    // console.log(this.ws)
     this.ws.onopen = data => {
       console.log('Connection open ...')
       this.ws.send(
