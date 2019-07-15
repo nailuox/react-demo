@@ -44,7 +44,7 @@ react 的 diff 算法用在什么地方呢？当组件更新的时候，react �
 
 组件的创造方法为 React.createClass() ——创造一个类，react 系统内部设计了一套类系统，利用它来创造 react 组件。但这并不是必须的，我们还可以用 es6 的 class 类来创造组件,这也是 Facebook 官方推荐的写法。
 
-![](https://raw.githubusercontent.com/bailicangdu/react-pxq/master/screenshot/icon_class.png)
+![](https://github.com/nailuox/react-demo/tree/master/screenshot/icon_class.png)
 
 这两种写法实现的功能一样但是原理却是不同，es6 的 class 类可以看作是构造函数的一个语法糖，可以把它当成构造函数来看，extends 实现了类之间的继承 —— 定义一个类 Main 继承 React.Component 所有的属性和方法，组件的生命周期函数就是从这来的。constructor 是构造器，在实例化对象时调用，super 调用了父类的 constructor 创造了父类的实例对象 this，然后用子类的构造函数进行修改。这和 es5 的原型继承是不同的，原型继承是先创造一个实例化对象 this，然后再继承父级的原型方法。了解了这些之后我们在看组件的时候就清楚很多。
 
