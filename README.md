@@ -44,7 +44,7 @@ react 的 diff 算法用在什么地方呢？当组件更新的时候，react �
 
 组件的创造方法为 React.createClass() ——创造一个类，react 系统内部设计了一套类系统，利用它来创造 react 组件。但这并不是必须的，我们还可以用 es6 的 class 类来创造组件,这也是 Facebook 官方推荐的写法。
 
-![](https://github.com/bailicangdu/pxq/blob/master/screenshot/icon_class.png)
+![](https://github.com/nailuox/react-demo/tree/master/screenshot/icon_class.png)
 
 这两种写法实现的功能一样但是原理却是不同，es6 的 class 类可以看作是构造函数的一个语法糖，可以把它当成构造函数来看，extends 实现了类之间的继承 —— 定义一个类 Main 继承 React.Component 所有的属性和方法，组件的生命周期函数就是从这来的。constructor 是构造器，在实例化对象时调用，super 调用了父类的 constructor 创造了父类的实例对象 this，然后用子类的构造函数进行修改。这和 es5 的原型继承是不同的，原型继承是先创造一个实例化对象 this，然后再继承父级的原型方法。了解了这些之后我们在看组件的时候就清楚很多。
 
@@ -54,7 +54,7 @@ react 的 diff 算法用在什么地方呢？当组件更新的时候，react �
 
 ## 组件的生命周期
 
-![](https://github.com/bailicangdu/pxq/blob/master/screenshot/react-lifecycle.png)
+![](https://github.com/nailuox/react-demo/tree/master/screenshot/react-lifecycle.png)
 
 **组件在初始化时会触发 5 个钩子函数：**
 
@@ -179,7 +179,7 @@ react 推崇的是单向数据流，自上而下进行数据的传递，但是�
 
 #### 流程是这个样子的：
 
-![](https://github.com/bailicangdu/pxq/blob/master/screenshot/simple_redux.jpg)
+![](https://github.com/nailuox/react-demo/tree/master/screenshot/simple_redux.jpg)
 
 值得注意的是 connect，Provider，mapStateToProps,mapDispatchToProps 是 react-redux 提供的，redux 本身和 react 没有半毛钱关系，它只是数据处理中心，没有和 react 产生任何耦合，是 react-redux 让它们联系在一起。
 
@@ -187,7 +187,7 @@ react 推崇的是单向数据流，自上而下进行数据的传递，但是�
 
 #### 先上一张图
 
-![](https://github.com/bailicangdu/pxq/blob/master/screenshot/all_redux.png)
+![](https://github.com/nailuox/react-demo/tree/master/screenshot/all_redux.png)
 
 明显比第一张要复杂，其实两张图说的是同一件事。从上而下慢慢分析：
 
@@ -361,7 +361,7 @@ import {
 
 通常我们在顶层的 ui 组件打印 props 时可以看到一堆属性：
 
-![](https://github.com/bailicangdu/pxq/blob/master/screenshot/react_props.png)
+![](https://github.com/nailuox/react-demo/tree/master/screenshot/react_props.png)
 
 上图的顶层 ui 组件属性总共有 18 个，如果刚刚接触 react，可能对这些属性怎么来的感到困惑，其实这些属性来自五个地方：
 
