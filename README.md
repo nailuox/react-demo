@@ -173,7 +173,7 @@ react 推崇的是单向数据流，自上而下进行数据的传递，但是�
 
 ## Redux
 
-首先，redux 并不是必须的，它的作用相当于在顶层组件之上又加了一个组件，作用是进行逻辑运算、储存数据和实现组件尤其是顶层组件的通信。如果组件之间的交流不多，逻辑不复杂，只是单纯的进行视图的渲染，这时候用回调，context 就行，没必要用 redux，用了反而影响开发速度。但是如果组件交流特别频繁，逻辑很复杂，那 redux 的优势就特别明显了。我第一次做 react 项目的时候并没有用 redux，所有的逻辑都是在组件内部实现，当时为了实现一个逻辑比较复杂的购物车，洋洋洒洒居然写了 800 多行代码，回头一看我自己都不知道写的是啥，画面太感人。
+首先，redux 并不是必须的，它的作用相当于在顶层组件之上又加了一个组件，作用是进行逻辑运算、储存数据和实现组件尤其是顶层组件的通信。如果组件之间的交流不多，逻辑不复杂，只是单纯的进行视图的渲染，这时候用回调，context 就行，没必要用 redux，用了反而影响开发速度。但是如果组件交流特别频繁，逻辑很复杂，那 redux 的优势就特别明显了。
 
 先简单说一下 redux 和 react 是怎么配合的。react-redux 提供了 connect 和 Provider 两个好基友，它们一个将组件与 redux 关联起来，一个将 store 传给组件。组件通过 dispatch 发出 action，store 根据 action 的 type 属性调用对应的 reducer 并传入 state 和这个 action，reducer 对 state 进行处理并返回一个新的 state 放入 store，connect 监听到 store 发生变化，调用 setState 更新组件，此时组件的 props 也就跟着变化。
 
@@ -181,7 +181,7 @@ react 推崇的是单向数据流，自上而下进行数据的传递，但是�
 
 ![](https://github.com/nailuox/react-demo/tree/master/screenshot/simple_redux.jpg)
 
-值得注意的是 connect，Provider，mapStateToProps,mapDispatchToProps 是 react-redux 提供的，redux 本身和 react 没有半毛钱关系，它只是数据处理中心，没有和 react 产生任何耦合，是 react-redux 让它们联系在一起。
+值得注意的是 connect，Provider，mapStateToProps,mapDispatchToProps 是 react-redux 提供的，redux 本身和 react 没有关系，它只是数据处理中心，没有和 react 产生任何耦合，是 react-redux 让它们联系在一起。
 
 #### 接下来具体分析一下，redux 以及 react-redux 到底是怎么实现的。
 
@@ -254,7 +254,7 @@ redux 的 state 和 react 的 state 两者完全没有关系，除了名字一�
 
 > component --> actionCreator(data) --> reducer --> component
 
-store 的三大功能：dispatch，subscribe，getState 都不需要手动来写了。react-redux 帮我们做了这些，同时它提供了两个好基友 Provider 和 connect。
+store 的三大功能：dispatch，subscribe，getState 都不需要手动来写了。react-redux 帮我们做了这些，同时它提供了两个组件 Provider 和 connect。
 
 **Provider**是一个组件，它接受 store 作为 props，然后通过 context 往下传，这样 react 中任何组件都可以通过 context 获取 store。也就意味着我们可以在任何一个组件里利用 dispatch(action)来触发 reducer 改变 state，并用 subscribe 监听 state 的变化，然后用 getState 获取变化后的值。但是并不推荐这样做，它会让数据流变的混乱，过度的耦合也会影响组件的复用，维护起来也更麻烦。
 
