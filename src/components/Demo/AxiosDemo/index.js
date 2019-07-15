@@ -64,7 +64,7 @@ class index extends Component {
   requestData = async () => {
     let users = []
     try {
-      const res = await Axios.get('/api/axios1.json')
+      const res = await Axios.get('/api/axios.json')
       users = res.data ? res.data : []
     } catch (e) {
       message.error('请求数据出错：' + e)
