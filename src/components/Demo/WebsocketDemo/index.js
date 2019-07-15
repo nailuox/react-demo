@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Row, Table, Spin } from 'antd'
+import { Col, Row, Table, Spin, message } from 'antd'
 import ReconnectingWebSocket from 'reconnectingwebsocket'
 
 import CustomBreadcrumb from '@common/CustomBreadcrumb'
@@ -62,9 +62,14 @@ class index extends Component {
   }
 
   fetchData = () => {
-    this.ws = new ReconnectingWebSocket(
-      'ws://123.207.167.163:9010/ajaxchattest'
-    )
+    try {
+      this.ws = new ReconnectingWebSocket(
+        'ws://123.207.167.163:9010/ajaxchattest'
+      )
+    } catch (e) {
+      message.error('websocket连接出错：' + e)
+    }
+
     console.log(this.ws)
     this.ws.onopen = data => {
       console.log('Connection open ...')
@@ -72,7 +77,6 @@ class index extends Component {
         `[{"id": 1,"username": "张三","sex": "男","age": 20,"hobby": "旅游"},{"id": 2,"username": "李四","sex": "男","age": 32,"hobby": "看书"}]`
       )
     }
-
     this.ws.onmessage = data => {
       console.log(data.data)
       const users = JSON.parse(

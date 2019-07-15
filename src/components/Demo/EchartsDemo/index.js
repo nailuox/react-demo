@@ -11,11 +11,11 @@ import 'echarts/lib/component/title'
 import 'echarts/lib/component/visualMap'
 import 'echarts/extension/bmap/bmap'
 
-import Axios from '@common/Axios'
+// import Axios from '@common/Axios'
 import CustomBreadcrumb from '@common/CustomBreadcrumb'
 import TypingCard from '@common/TypingCard'
 import styles from './index.module.less'
-import { geoData, hours, days } from './data'
+import { geoData, hours, days, hotmap } from './data'
 
 class index extends Component {
   render() {
@@ -40,7 +40,7 @@ class index extends Component {
               style={{ minHeight: 400 }}
               id="1"
             >
-              <div id="column" style={{ width: '100%', height: 400 }} />
+              <div id="column" style={{ width: '95%', height: 400 }} />
             </Card>
           </Col>
           <Col span={12}>
@@ -64,7 +64,7 @@ class index extends Component {
               style={{ minHeight: 400 }}
               id="2"
             >
-              <div id="line" style={{ width: '100%', height: 400 }} />
+              <div id="line" style={{ width: '95%', height: 400 }} />
             </Card>
           </Col>
           <Col span={12}>
@@ -88,7 +88,7 @@ class index extends Component {
               style={{ minHeight: 400 }}
               id="3"
             >
-              <div id="echarts3" style={{ width: '100%', height: 400 }} />
+              <div id="echarts3" style={{ width: '95%', height: 400 }} />
             </Card>
           </Col>
           <Col span={12}>
@@ -99,7 +99,7 @@ class index extends Component {
               style={{ minHeight: 400 }}
               id="6"
             >
-              <div id="echarts6" style={{ width: '100%', height: 400 }} />
+              <div id="echarts6" style={{ width: '95%', height: 400 }} />
             </Card>
           </Col>
         </Row>
@@ -112,7 +112,7 @@ class index extends Component {
               style={{ minHeight: 400 }}
               id="7"
             >
-              <div id="echarts7" style={{ width: '100%', height: 400 }} />
+              <div id="echarts7" style={{ width: '95%', height: 400 }} />
             </Card>
           </Col>
           <Col span={12}>
@@ -123,7 +123,7 @@ class index extends Component {
               style={{ minHeight: 400 }}
               id="8"
             >
-              <div id="echarts8" style={{ width: '100%', height: 400 }} />
+              <div id="echarts8" style={{ width: '95%', height: 400 }} />
             </Card>
           </Col>
         </Row>
@@ -508,8 +508,9 @@ class index extends Component {
 
   initHeatMap2 = async () => {
     const myChart = echarts.init(document.getElementById('echarts8'))
-    const res = await Axios.get('/api/heatmap.json')
-    const data = res.data
+    // const res = await Axios.get('/api/heatmap.json')
+    // const data = res.data
+    const data = hotmap
     var points = [].concat.apply(
       [],
       data.map(function(track) {
