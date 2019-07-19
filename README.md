@@ -40,6 +40,8 @@ react 的 diff 算法用在什么地方呢？当组件更新的时候，react �
 
 对于列表的 diff 算法稍有不同，因为列表通常具有相同的结构，在对列表节点进行删除，插入，排序的时候，单个节点的整体操作远比一个个对比一个个替换要好得多，所以在创建列表的时候需要设置 key 值，这样 react 才能分清谁是谁。当然不写 key 值也可以，但这样通常会报出警告，通知我们加上 key 值以提高 react 的性能。
 
+![](https://raw.githubusercontent.com/nailuox/react-demo/master/screenshot/diff.png)
+
 ## React 组件是怎么来的
 
 组件的创造方法为 React.createClass() ——创造一个类，react 系统内部设计了一套类系统，利用它来创造 react 组件。但这并不是必须的，我们还可以用 es6 的 class 类来创造组件,这也是 Facebook 官方推荐的写法。
