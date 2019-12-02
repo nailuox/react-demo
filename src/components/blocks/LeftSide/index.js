@@ -44,6 +44,19 @@ class LeftSide extends React.Component {
               </span>
             }
           >
+            <Menu.Item key="qbcharts">
+              <Link to="/app/qbcharts">
+                <Icon type="eye" />
+                <span>QbCharts</span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="intersection">
+              <Link to="/app/intersection">
+                <Icon type="fork" />
+                <span>Intersection</span>
+              </Link>
+            </Menu.Item>
+
             <Menu.Item key="echarts">
               <Link to="/app/echarts">
                 <Icon type="pie-chart" />
@@ -86,10 +99,29 @@ class LeftSide extends React.Component {
                 <span>FortAwesome</span>
               </Link>
             </Menu.Item>
+
+            <Menu.Item key="keyintersection">
+              <Link to="/app/keyintersection">
+                <Icon type="appstore" />
+                <span>KeyIntersection</span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="keyroad">
+              <Link to="/app/keyroad">
+                <Icon type="appstore" />
+                <span>KeyRoad</span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="datepickerdemo">
+              <Link to="/app/datepickerdemo">
+                <Icon type="appstore" />
+                <span>DatePickerDemo</span>
+              </Link>
+            </Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>
-    )
+    );
   }
 
   handleMenuSelect = item => {

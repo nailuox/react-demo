@@ -1,0 +1,57 @@
+  .searchBox {
+    //position: absolute;
+    //right: 160px;
+    //top: 190px;
+    width: 398px;
+    height: 60px;
+    background: rgba(12, 29, 49, 1);
+    border: 1px solid rgba(123, 180, 223, 0.56);
+    border-radius: 5px;
+    // z-index: 9999;
+
+    .calendarSearch {
+      display: inline;
+      // margin-left: 20px;
+
+      :global {
+        .ant-calendar-picker {
+          width: 300px !important;
+
+          .ant-input {
+            color: rgba(223, 246, 255, 1);
+            line-height: 24px;
+            font-size: 25px;
+            font-family: Square721 BT;
+            font-weight: bold;
+            background: rgba(12, 29, 49, 1) !important;
+            border: none !important;
+          }
+        }
+      }
+
+
+    }
+
+    .prefix {
+      margin: 20px 20px 15px 17px;
+      text-align: center;
+      line-height: 24px;
+      color: rgba(53, 184, 255, 1);
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 9px;
+      display: inline-block;
+      // vertical-align: middle;
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 43px;
+        background: rgba(123, 180, 223, 0.56);
+        position: absolute;
+        left: 80px;
+        top: 8px;
+      }
+    }
+
+  }

@@ -1,0 +1,418 @@
+.commonStyleTableBox {
+  width: 95%;
+  margin: 0 auto 40px auto;
+  background: #091a24;
+  border-bottom: 2px solid #7db3e1;
+  height: calc(100vh - 298px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.commonStyleTable {
+  width: 94.5%;
+  margin: 0 auto;
+
+  .tableBtnBox {
+    :global {
+      .ant-btn {
+        background-color: #7db3e1;
+        border-radius: 2px;
+        color: #fff;
+        border: none;
+        margin: 0 7px;
+
+        &.none {
+          background-color: #767676 !important;
+          border-radius: 2px;
+          color: #fff;
+          border: none;
+          margin: 0 7px;
+        }
+      }
+    }
+  }
+}
+
+.antdTableStyle {
+  .tableIdBox {
+    width: 22px;
+    height: 22px;
+    background-color: #7db3e1;
+    border-radius: 11px;
+    margin-left: 9px;
+    display: inline-block;
+    line-height: 21px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0 !important;
+  }
+
+
+
+  :global {
+    .device-status-ico {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      border-radius: 20px;
+      position: relative;
+      top: 3px;
+      left: -8px;
+
+      &::after {
+        position: absolute;
+        left: 3px;
+        top: -1px;
+        width: 10px;
+        height: 10px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    .table-status-box-0 {
+      .device-status-ico {
+        background: #7db3e1;
+
+        &::after {
+          content: "✓";
+          font-weight: 100;
+          left: 2px;
+          top: 0px;
+        }
+      }
+    }
+
+    .table-status-box-1 {
+      .device-status-ico {
+        background: #929292;
+
+        &::after {
+          content: "x";
+          top: -2px;
+        }
+      }
+    }
+
+    .table-status-box-2 {
+      .device-status-ico {
+        background: #f22635;
+
+        &::after {
+          content: "!";
+          top: -1px;
+          left: 2px;
+        }
+      }
+    }
+
+    .ranking-0 {
+      background-color: #e17d7d;
+    }
+
+    .ranking-1 {
+      background-color: #e1aa7d;
+    }
+
+    .ant-table-tbody>tr>td,
+    .ant-table-thead>tr>th {
+      text-align: center;
+    }
+
+    .ant-table-bordered .ant-table-body>table {
+      border: none !important;
+    }
+
+    .ant-table-body {
+      background: #0a1a22;
+      border-collapse: separate;
+    }
+
+    .ant-table-thead>tr,
+    .ant-table-tbody>tr {
+      font-family: MicrosoftYaHei;
+      font-size: 15px;
+      letter-spacing: 1px;
+      color: #ffffff !important;
+      background: #263346;
+      border-bottom: 8px #091a24 solid;
+    }
+
+    .ant-table-tbody>tr {
+      border-radius: 12px !important;
+
+      >td {
+        position: relative;
+
+        &:first-child {
+          >.table-status-box-0 span {
+            color: #7db3e1 !important;
+          }
+
+          >.table-status-box-1 span {
+            color: #929292 !important;
+          }
+
+          >.table-status-box-2 span {
+            color: #f22635 !important;
+          }
+
+          border-top-left-radius: 12px;
+          border-bottom-left-radius: 12px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border-radius: 12px 0 0 12px;
+            width: 5px;
+            height: 100%;
+            background: #7db3e1;
+          }
+        }
+
+        &:last-child {
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+      }
+    }
+
+    .ant-table-tbody>tr.device_status_tr_1 {
+      background-color: #353535;
+
+      >td:first-child {
+        &::after {
+          background: #929292;
+        }
+      }
+
+      >.ant-table-row-hover>td,
+      &:hover>td {
+        background: #353535 !important;
+      }
+    }
+
+    .ant-table-tbody>tr.device_status_tr_2 {
+      background-color: #3f2f31;
+
+      >td:first-child {
+        &::after {
+          background: #f22635;
+        }
+      }
+
+      >.ant-table-row-hover>td,
+      &:hover>td {
+        background: #3f2f31 !important;
+      }
+    }
+
+    .ant-table-thead>tr>th {
+      border: none !important;
+      background: #0a1a23;
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #acbec7;
+    }
+
+    .ant-table-tbody>tr>td {
+      border: none !important;
+    }
+
+    .ant-table-thead>tr.ant-table-row-hover>td,
+    .ant-table-tbody>tr.ant-table-row-hover>td,
+    .ant-table-thead>tr:hover>td,
+    .ant-table-tbody>tr:hover>td {
+      background-color: #263346 !important;
+    }
+
+    .ant-table-pagination {
+      >li {
+        background: #7db3e1 !important;
+        color: #fff !important;
+        border: none !important;
+
+        &:hover {
+          color: #fff !important;
+        }
+
+        >a {
+          color: #fff !important;
+          background: #7db3e1 !important;
+          border: none !important;
+
+          &:hover {
+            color: #fff !important;
+          }
+        }
+      }
+
+      .ant-pagination-disabled {
+        background: #385575 !important;
+
+        >a {
+          background: #385575 !important;
+        }
+      }
+    }
+
+    .device_function_color {
+      background-color: #435d79;
+      border-radius: 2px;
+      border: solid 2px #628cb9;
+      color: #fff;
+      text-align: center;
+      margin: 3px 8px;
+      display: inline-block;
+      padding: 1px 5px 1px 9px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+
+      &.none {
+        background-color: #5f6670;
+        border: solid 2px #929292;
+        color: #b4b4b4;
+      }
+    }
+
+    .ant-table-thead>tr>th .ant-table-filter-icon {
+      position: relative !important;
+      margin-left: 10px;
+    }
+
+    .label-element {
+
+      .screening-text {
+        font-family: MicrosoftYaHei;
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+        color: #acbec7 !important;
+        width: 66px !important;
+        background-color: #263346 !important;
+        border-radius: 2px !important;
+        border: solid 1px #364858 !important;
+        padding: 2px 0 2px 8px;
+
+        >i {
+          padding: 0 3px;
+        }
+      }
+    }
+
+    .ant-table-small {
+      border: 1px solid #3c4958 !important;
+    }
+
+    .ant-table-small>.ant-table-content .ant-table-header {
+      background-color: #3c4958 !important;
+    }
+
+    .ant-table-small>.ant-table-content .ant-table-header,
+    .ant-table-header {
+      background-color: none !important;
+    }
+
+    .ant-table-placeholder {
+      background: #091a24 !important;
+      border-top: none !important;
+    }
+
+    .ant-empty-description {
+      color: #fff !important;
+    }
+
+    .ant-table-placeholder {
+      border-bottom: none !important;
+    }
+
+    .ant-table-row-expand-icon {
+      background: none !important;
+      border: 1px solid #7db3e1;
+      color: #7db3e1;
+    }
+
+    .ant-upload.ant-upload-select-picture-card {
+      background-color: #263346 !important;
+      border: 1px dashed #7db3e1 !important;
+    }
+
+    .ant-upload {
+      color: #bbb !important;
+    }
+
+    .ant-table-bordered.ant-table-empty .ant-table-placeholder {
+      border: none !important;
+    }
+
+    .ant-table-fixed-header>.ant-table-content>.ant-table-scroll>.ant-table-body {
+      background: #0a1a22 !important;
+    }
+
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-month,
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-date {
+      border-top: 2px solid #3e526f !important;
+      color: #d2d2d2 !important;
+    }
+
+    .ant-fullcalendar-value,
+    .ant-fullcalendar {
+      color: #fff !important;
+    }
+
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-month,
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-selected-day .ant-fullcalendar-date {
+      background: #3a4c67 !important;
+    }
+
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-month,
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-today .ant-fullcalendar-date {
+      border-top-color: #65a6e2 !important;
+    }
+
+    .ant-fullcalendar-date {
+      &:hover {
+        background: #3a4c67 !important;
+      }
+    }
+
+    .ant-table-small>.ant-table-content>.ant-table-body>table>.ant-table-thead>tr {
+      border: none !important;
+      background: #0a1a23;
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: #acbec7;
+    }
+
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-value {
+      position: absolute !important;
+      right: 22px !important;
+      font-weight: bold;
+    }
+
+    .ant-fullcalendar-column-header .ant-fullcalendar-column-header-inner {
+      font-weight: bold !important;
+    }
+
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-content {
+      height: 100% !important;
+    }
+
+    .ant-fullcalendar-fullscreen .ant-fullcalendar-date {
+      height: 110px !important;
+    }
+
+    .ant-btn>.anticon+span,
+    .ant-btn>span+.anticon {
+      margin-left: 0 !important;
+    }
+
+  }
+
+}

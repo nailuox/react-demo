@@ -1,0 +1,162 @@
+.showBox {
+  width: auto;
+  height: auto;
+  background: rgba(13, 30, 49, 1);
+  border: 1px solid rgba(123, 180, 223, 0.5647058823529412);
+  //opacity: 1;
+  border-radius: 5px;
+
+  .tableBox {
+    //padding: 30px;
+    //height: auto;
+    //width: 100%;
+    padding:70px 30px
+
+    .chartTitle {
+      font-family: MicrosoftYaHei;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: rgba(223, 246, 255, 1);
+      position: absolute;
+      left: 10px;
+      //top: -25px;
+      top: -15px;
+
+      &::after {
+        content: "";
+        width: 3px;
+        height: 24px;
+        background: rgba(119, 189, 234, 1);
+        position: absolute;
+        left: -10px;
+        top: 2px;
+      }
+
+      &::before {
+        content: "";
+        width: 3px;
+        height: 24px;
+        background: rgba(119, 189, 234, 1);
+        position: absolute;
+        top: 2px;
+        right: -10px;
+      }
+    }
+
+    .table {
+      margin-top: 20px;
+
+      :global {
+        .ant-table-thead {
+          >tr {
+            border-bottom: 8px rgba(13, 30, 49, 1) solid;
+
+            >th {
+              background: rgba(13, 30, 49, 1);
+              color: rgba(223, 246, 255, 1);
+            }
+          }
+        }
+
+        .ant-table-tbody {
+          >tr {
+            border-bottom: 8px rgba(13, 30, 49, 1) solid;
+
+            >td {
+              color: rgba(223, 246, 255, 1);
+
+              &:first-child {
+                color: rgba(105, 180, 233, 1);
+              }
+            }
+          }
+        }
+
+        .ant-table-placeholder {
+          background: rgba(13, 30, 49, 1) !important;
+
+          .ant-empty-description {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+ .tableBox2 {
+   padding: 30px 30px 30px 0;
+   height: auto;
+   width: 100%;
+
+   .chartTitle {
+     font-family: MicrosoftYaHei;
+     font-size: 18px;
+     font-weight: bold;
+     letter-spacing: 2px;
+     color: rgba(223, 246, 255, 1);
+     position: absolute;
+     left: 10px;
+     //top: -25px;
+     top: -15px;
+
+     &::after {
+       content: "";
+       width: 3px;
+       height: 24px;
+       background: rgba(119, 189, 234, 1);
+       position: absolute;
+       left: -10px;
+       top: 2px;
+     }
+
+     &::before {
+       content: "";
+       width: 3px;
+       height: 24px;
+       background: rgba(119, 189, 234, 1);
+       position: absolute;
+       top: 2px;
+       right: -10px;
+     }
+   }
+
+   .table {
+     margin-top: 20px;
+
+     :global {
+       .ant-table-thead {
+         >tr {
+           border-bottom: 8px rgba(13, 30, 49, 1) solid;
+
+           >th {
+             background: rgba(13, 30, 49, 1);
+             color: rgba(223, 246, 255, 1);
+           }
+         }
+       }
+
+       .ant-table-tbody {
+         >tr {
+           border-bottom: 8px rgba(13, 30, 49, 1) solid;
+
+           >td {
+             color: rgba(223, 246, 255, 1);
+
+             &:first-child {
+               color: rgba(105, 180, 233, 1);
+             }
+           }
+         }
+       }
+
+       .ant-table-placeholder {
+         background: rgba(13, 30, 49, 1) !important;
+
+         .ant-empty-description {
+           color: #fff !important;
+         }
+       }
+     }
+   }
+ }
+}

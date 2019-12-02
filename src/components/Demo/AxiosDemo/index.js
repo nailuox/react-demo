@@ -30,7 +30,7 @@ class index extends Component {
         <CustomBreadcrumb arr={['Axios Demo']} />
         <TypingCard source={cardContent} id="howUse" title="使用说明" />
 
-        <Row gutter={20}>
+        <Row gutter={32}>
           <Col span={24}>
             <Spin spinning={loading}>
               <Table

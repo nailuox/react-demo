@@ -1,0 +1,104 @@
+.main {
+  width: 667px;
+  height: 815px;
+  background-color: #000000;
+  border: solid 1px rgba(123, 180, 223, 0.3);
+  opacity: 0.7;
+
+  .headWord {
+    font-family: MicrosoftYaHei;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 20px 10px 5px 10px;
+  }
+
+  .headNum {
+    font-family: Square721BT-Roman;
+    font-size: 30px;
+    font-weight: bold;
+    color: #d4a552;
+    margin: 0px 10px 5px 10px;
+  }
+  .reacorListTable{
+    padding:10px;
+
+    .thWordBig {
+      font-family: MicrosoftYaHei;
+      font-size: 20px;
+      font-weight: bold;
+      color: #dff6ff;
+    }
+    .thWordBig2 {
+      font-family: MicrosoftYaHei;
+      font-size: 20px;
+      font-weight: bold;
+      color: #d4a552;
+    }
+    .thWordSmall {
+      font-family: MicrosoftYaHei;
+      font-size: 15px;
+      color: #dff6ff;
+    }
+    .thWordSmall2 {
+      font-family: MicrosoftYaHei;
+      font-size: 15px;
+      color: #d4a552;
+    }
+    .tdWord {
+      font-family: MicrosoftYaHei;
+      font-size: 15px;
+      color: #a3caeb;
+      float: left;
+    }
+    .tdWord2 {
+      font-family: MicrosoftYaHei;
+      font-size: 15px;
+      color: #dff6ff;
+    }
+    .tdWord3 {
+      font-family: MicrosoftYaHei;
+      font-size: 15px;
+      color: #d4a552;
+    }
+    .circle {
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      background-color: #dff6ff;
+      float: left;
+      margin: 10px;
+    }
+
+  }
+
+  :global(.ant-table-thead > tr > th) {
+    background-color: #4d6483;
+    padding: 8px 8px;
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    border-bottom: 1px dashed #4d6483;
+    transition: all 0.3s, border 0s;
+    padding: 8px 8px;
+  }
+
+  :global(.ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td) {
+    background: #4d6483;
+    opacity:0.47;
+  }
+  :global(.ant-table-placeholder){
+    position: relative;
+    z-index: 1;
+    padding: 16px 16px;
+    color: rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    text-align: center;
+    background: #000;
+    border-bottom: 0px solid #e8e8e8;
+    border-radius: 0 0 4px 4px;
+  }
+
+}
+
+
+

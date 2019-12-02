@@ -112,7 +112,7 @@
     "eslint._legacyModuleResolve": true,
     // git是否启用自动拉取
     "git.autofetch": false,
-    "git.path": "G:/soft/Git/bin/git.exe",
+    "git.path": "D:/Program Files/Git/bin",
     // 配置gitlen中git提交历史记录的信息显示情况
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,

@@ -11,6 +11,11 @@ import VideoDemo from '@components/Demo/VideoDemo'
 import OpenLayerDemo from '@components/Demo/OpenLayerDemo'
 import WebsocketDemo from '@components/Demo/WebsocketDemo'
 import FortAwesomeDemo from '@components/Demo/FortAwesomeDemo'
+import QbChartDemo from '@components/Demo/QbChartDemo'
+import IntersectionDemo from '@components/Demo/IntersectionDemo'
+import KeyIntersection from '@components/Demo/KeyIntersection'
+import KeyRoad from '@components/Demo/KeyRoad'
+import DatePickerDemo from'@components/Demo/DatePickerDemo'
 
 const { Content } = Layout
 
@@ -19,6 +24,8 @@ class AppRoute extends React.Component {
     return (
       <Content>
         <Route path="/app/dashboard" component={Dashboard} />
+        <Route path="/app/qbcharts" component={QbChartDemo} />
+        <Route path="/app/intersection" component={IntersectionDemo} />
         <Route path="/app/echarts" component={EchartsDemo} />
         <Route path="/app/axios" component={AxiosDemo} />
         <Route path="/app/fabric" component={FabricDemo} />
@@ -26,8 +33,11 @@ class AppRoute extends React.Component {
         <Route path="/app/openlayer" component={OpenLayerDemo} />
         <Route path="/app/websocket" component={WebsocketDemo} />
         <Route path="/app/fortawesome" component={FortAwesomeDemo} />
+        <Route path="/app/keyintersection" component={KeyIntersection} />
+        <Route path="/app/keyroad" component={KeyRoad} />
+        <Route path="/app/datepickerdemo" component={DatePickerDemo} />
       </Content>
-    )
+    );
   }
 }
 
