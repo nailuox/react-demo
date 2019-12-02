@@ -1,11 +1,7 @@
 import React from 'react'
 import TodayChart from './TodayChart.js'
 import CompareChart from './CompareChart.js'
-import IntersectionList from './IntersectionList.js'
-import ZhddChart from './ZhddChart.js'
-import KeyFocusIntersection from './KeyFocusIntersection.js'
-import KeyFocusRoad from './KeyFocusRoad.js'
-import { todaydata, comparedata,intersectionList,intersectionBasic } from './data.js'
+import { todaydata, comparedata } from './data.js'
 
 class index extends React.Component {
   render() {
@@ -14,7 +10,7 @@ class index extends React.Component {
         <TodayChart ref="todayChart" />
         <CompareChart ref="compareChart" />
       </div>
-    );
+    )
   }
   componentDidMount() {
     this.refs.todayChart.setData(todaydata)
@@ -22,7 +18,7 @@ class index extends React.Component {
     //this.refs.intersection.setData(intersectionList,intersectionBasic)
   }
   tabClickHandler(intersection_id) {
-    alert("intersection_id:" + intersection_id);
+    alert('intersection_id:' + intersection_id)
   }
   //<TodayChart ref="todayChart"/>
   // <CompareChart ref="compareChart"/>

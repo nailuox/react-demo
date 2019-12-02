@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Table, Row, Col } from 'antd'
-import moment from 'moment'
 
 import styles from './index.module.less'
 import tableStyles from '@styles/Table/index.module.less'
@@ -13,43 +12,43 @@ class index extends Component {
     this.state = {
       data: [
         {
-          roadid: "11",
-          roadname: "东快速辅路(南行)出口汇流处",
-          peakhour: "07:00-08:00",
-          blanceindex: "9500"
+          roadid: '11',
+          roadname: '东快速辅路(南行)出口汇流处',
+          peakhour: '07:00-08:00',
+          blanceindex: '9500'
         },
         {
-          roadid: "12",
-          roadname: "东快速辅路(南行)出口汇流处",
-          peakhour: "07:00-08:00",
-          blanceindex: "9500"
+          roadid: '12',
+          roadname: '东快速辅路(南行)出口汇流处',
+          peakhour: '07:00-08:00',
+          blanceindex: '9500'
         },
         {
-          roadid: "13",
-          roadname: "东快速辅路(南行)出口汇流处",
-          peakhour: "07:00-08:00",
-          blanceindex: "9500"
+          roadid: '13',
+          roadname: '东快速辅路(南行)出口汇流处',
+          peakhour: '07:00-08:00',
+          blanceindex: '9500'
         },
         {
-          roadid: "14",
-          roadname: "东快速辅路(南行)出口汇流处",
-          peakhour: "07:00-08:00",
-          blanceindex: "9500"
+          roadid: '14',
+          roadname: '东快速辅路(南行)出口汇流处',
+          peakhour: '07:00-08:00',
+          blanceindex: '9500'
         },
         {
-          roadid: "15",
-          roadname: "东快速辅路(南行)出口汇流处",
-          peakhour: "07:00-08:00",
-          blanceindex: "9500"
+          roadid: '15',
+          roadname: '东快速辅路(南行)出口汇流处',
+          peakhour: '07:00-08:00',
+          blanceindex: '9500'
         },
         {
-          roadid: "16",
-          roadname: "东快速辅路(南行)出口汇流处",
-          peakhour: "07:00-08:00",
-          blanceindex: "9500"
+          roadid: '16',
+          roadname: '东快速辅路(南行)出口汇流处',
+          peakhour: '07:00-08:00',
+          blanceindex: '9500'
         }
       ]
-    };
+    }
   }
 
   render() {
@@ -59,9 +58,7 @@ class index extends Component {
         <div className={styles.tableBox}>
           <Row>
             <Col span={24}>
-              <span className={styles.chartTitle}>
-                平衡指数排名
-              </span>
+              <span className={styles.chartTitle}>平衡指数排名</span>
             </Col>
             <Col span={24}>
               <Table
@@ -93,7 +90,7 @@ class index extends Component {
           </Row>
         </div>
       </div>
-    );
+    )
   }
 
   setTableData = data => {
