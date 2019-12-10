@@ -15,7 +15,8 @@ import QbChartDemo from '@components/Demo/QbChartDemo'
 import IntersectionDemo from '@components/Demo/IntersectionDemo'
 import KeyIntersection from '@components/Demo/KeyIntersection'
 import KeyRoad from '@components/Demo/KeyRoad'
-import DatePickerDemo from'@components/Demo/DatePickerDemo'
+import DatePickerDemo from '@components/Demo/DatePickerDemo'
+import TableDemo from '@components/Demo/TableDemo'
 
 const { Content } = Layout
 
@@ -36,8 +37,9 @@ class AppRoute extends React.Component {
         <Route path="/app/keyintersection" component={KeyIntersection} />
         <Route path="/app/keyroad" component={KeyRoad} />
         <Route path="/app/datepickerdemo" component={DatePickerDemo} />
+        <Route path="/app/table" component={TableDemo} />
       </Content>
-    );
+    )
   }
 }
 

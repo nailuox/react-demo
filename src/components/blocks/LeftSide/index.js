@@ -118,10 +118,16 @@ class LeftSide extends React.Component {
                 <span>DatePickerDemo</span>
               </Link>
             </Menu.Item>
+            <Menu.Item key="tabledemo">
+              <Link to="/app/table">
+                <Icon type="appstore" />
+                <span>TableDemo</span>
+              </Link>
+            </Menu.Item>
           </SubMenu>
         </Menu>
       </Sider>
-    );
+    )
   }
 
   handleMenuSelect = item => {
@@ -150,7 +156,4 @@ const mapDispatch = dispatch => ({
   }
 })
 
-export default connect(
-  mapState,
-  mapDispatch
-)(LeftSide)
+export default connect(mapState, mapDispatch)(LeftSide)
