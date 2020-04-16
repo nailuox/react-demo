@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect, HashRouter, Route, Switch } from 'react-router-dom'
-import { Layout, LocaleProvider, Spin } from 'antd'
+import { ConfigProvider, Layout, Spin } from 'antd'
 import zhCN from 'antd/lib/locale-provider/zh_CN'
 import moment from 'moment'
 import 'moment/locale/zh-cn'
@@ -18,52 +18,52 @@ moment.locale('zh-cn')
 Spin.setDefaultIndicator(<div className={styles.spiner}>Loading...</div>)
 
 class App extends React.Component {
-  render() {
-    return (
-      <LocaleProvider locale={zhCN}>
-        <ReduxProvider store={store}>
-          <HashRouter basename={Constant.appBasePath}>
-            <Layout>
-              <Switch>
-                {/* <Route
+	render() {
+		return (
+			<ConfigProvider locale={zhCN}>
+				<ReduxProvider store={store}>
+					<HashRouter basename={Constant.appBasePath}>
+						<Layout>
+							<Switch>
+								{/* <Route
                   exact
                   path="/"
                   component={Login}
                 /> */}
-                <Route path="/app" component={AppContent} />
-                <Route
-                  render={() => (
-                    <Redirect to={{ pathname: '/app/dashboard' }} />
-                  )}
-                />
-              </Switch>
-            </Layout>
-          </HashRouter>
-        </ReduxProvider>
-      </LocaleProvider>
-    )
-  }
+								<Route path="/app" component={AppContent} />
+								<Route
+									render={() => (
+										<Redirect to={{ pathname: '/app/dashboard' }} />
+									)}
+								/>
+							</Switch>
+						</Layout>
+					</HashRouter>
+				</ReduxProvider>
+			</ConfigProvider>
+		)
+	}
 }
 
 class AppContent extends React.Component {
-  // componentWillMount () {
-  //   const token = sessionStorage.getItem(Constant.storageKeys.token)
-  //   if (!token) {
-  //     AppHistory.push('/')
-  //   }
-  // }
+	// componentWillMount () {
+	//   const token = sessionStorage.getItem(Constant.storageKeys.token)
+	//   if (!token) {
+	//     AppHistory.push('/')
+	//   }
+	// }
 
-  render() {
-    return (
-      <Layout>
-        <LeftSide />
-        <Layout className={styles.rightSide}>
-          <Header />
-          <AppRoute />
-        </Layout>
-      </Layout>
-    )
-  }
+	render() {
+		return (
+			<Layout>
+				<LeftSide />
+				<Layout className={styles.rightSide}>
+					<Header />
+					<AppRoute />
+				</Layout>
+			</Layout>
+		)
+	}
 }
 
 export default App

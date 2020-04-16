@@ -1,52 +1,57 @@
-import React from "react";
+import React from 'react'
 
-import { Form, Select, Input } from "antd";
+import { Form, Row, Col } from 'antd'
+// import '@ant-design/compatible/assets/index.css'
 
-const { Option } = Select;
+import { Select, Input } from 'antd'
+
+const { Option } = Select
 class EditModal extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
-  render() {
-    const { form, editItem } = this.props;
-    const { getFieldDecorator } = form;
-    return (
-      <Form>
-        <Form.Item label="id">
-          {getFieldDecorator("id", {
-            initialValue: editItem.id
-          })(<Input />)}
-        </Form.Item>
-        <Form.Item label="username">
-          {getFieldDecorator("username", {
-            initialValue: editItem.username
-          })(<Input />)}
-        </Form.Item>
-        <Form.Item label="Sex">
-          {getFieldDecorator("sex", {
-            initialValue: editItem.sex
-          })(
-            <Select placeholder="Select a option and change input text above">
-              <Option value="male">男</Option>
-              <Option value="female">女</Option>
-            </Select>
-          )}
-        </Form.Item>
-        <Form.Item label="age">
-          {getFieldDecorator("age", {
-            initialValue: editItem.age
-          })(<Input />)}
-        </Form.Item>
-        <Form.Item label="hobby">
-          {getFieldDecorator("hobby", {
-            initialValue: editItem.hobby
-          })(<Input />)}
-        </Form.Item>
-      </Form>
-    );
-  }
+	render() {
+		const { editItem } = this.props
+		return (
+			<Form>
+				<Row gutter={[20, 20]}>
+					<Col span={24}>
+						<Form.Item label="id" initialValue={editItem.id}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[20, 20]}>
+					<Col span={24}>
+						<Form.Item label="username" initialValue={editItem.username}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[20, 20]}>
+					<Col span={24}>
+						<Form.Item label="Sex" initialValue={editItem.sex}>
+							<Select>
+								<Option value="male">男</Option>
+								<Option value="female">女</Option>
+							</Select>
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[20, 20]}>
+					<Col span={24}>
+						<Form.Item label="age" initialValue={editItem.age}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+				<Row gutter={[20, 20]}>
+					<Col span={24}>
+						<Form.Item label="hobby" initialValue={editItem.hobby}>
+							<Input />
+						</Form.Item>
+					</Col>
+				</Row>
+			</Form>
+		)
+	}
 }
 
-export default Form.create()(EditModal);
+export default EditModal
