@@ -13,17 +13,18 @@
   "editor.snippetSuggestions": "top",
   "editor.wordWrapColumn": 200,
   "editor.wordWrap": "off",
-//   "editor.quickSuggestions": {
-//     "other": true,
-//     "comments": true,
-//     "strings": false
-//   },
-  "terminal.integrated.shell.windows": "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  //   "editor.quickSuggestions": {
+  //     "other": true,
+  //     "comments": true,
+  //     "strings": false
+  //   },
+  "terminal.integrated.shell.windows": "C:/windows/System32/WindowsPowerShell/v1.0/powershell.exe",
   "javascript.suggestionActions.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   // 安装了tslint插件后，是否启用该插件
-  "typescript.validate.enable": true,
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false,
   "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Atom One Dark",
@@ -56,12 +57,12 @@
     "*.wxss": "css",
     "*.cjson": "jsonc",
     "*.wxs": "javascript",
-    "*.js": "javascriptreact"
+    "*.js": "javascriptreact",
+    //"*.vue": "html"
   },
-  // prettier 设置语句末尾加分号 true 加分号 false 不加分好
-  "prettier.semi": false,
   // prettier 设置强制单引号
   "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
   "prettier.useTabs": true,
   "breadcrumbs.enabled": true,
   // 配置emmet是否启用tab展开缩写
@@ -84,17 +85,18 @@
   "emmet.showSuggestionsAsSnippets": true,
   "vetur.format.defaultFormatter.js": "vscode-typescript",
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.tsdk": "D:/share/node-v12.16.2-win-x64/node-v12.16.2-win-x64/node_modules/typescript/lib",
   // 格式化快捷键 shirt+alt+F。vscode格式化有bug，有时可能需要多按几次
   // 保存时自动格式化
   "editor.formatOnPaste": true,
   // 是否开启eslint检测
   "eslint.enable": true,
-  // 文件保存时，是否自动根据eslint进行格式化
-  "eslint.autoFixOnSave": true,
   // eslint配置文件
   "eslint.options": {
     "configFile": "E:/aaaworkspace/all-template/template-pc-vue-elementui/.eslintrc.js",
-    "plugins": ["html"]
+    "plugins": [
+      "html"
+    ]
   },
   "eslint.validate": [
     "javascript",
@@ -114,7 +116,7 @@
   "eslint._legacyModuleResolve": true,
   // git是否启用自动拉取
   "git.autofetch": false,
-  "git.path": "G:/soft/Git/cmd/git.exe",
+  "git.path": "C:/Program Files/Git/cmd/git.exe",
   // 配置gitlen中git提交历史记录的信息显示情况
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -197,5 +199,11 @@
     "source.fixAll.eslint": true
   },
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.packageManager": "yarn",
+  "prettier.arrowParens": "avoid",
+  "prettier.semi": false
 }
