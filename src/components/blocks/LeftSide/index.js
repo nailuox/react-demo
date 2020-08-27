@@ -6,8 +6,8 @@ import {
 	ApiOutlined,
 	AppstoreOutlined,
 	DashboardOutlined,
-	EyeOutlined,
-	ForkOutlined,
+	// EyeOutlined,
+	// ForkOutlined,
 	GlobalOutlined,
 	HighlightOutlined,
 	MenuUnfoldOutlined,
@@ -59,7 +59,7 @@ class LeftSide extends React.Component {
 							</span>
 						}
 					>
-						<Menu.Item key="qbcharts">
+						{/* <Menu.Item key="qbcharts">
 							<Link to="/app/qbcharts">
 								<EyeOutlined />
 								<span>QbCharts</span>
@@ -70,7 +70,7 @@ class LeftSide extends React.Component {
 								<ForkOutlined />
 								<span>Intersection</span>
 							</Link>
-						</Menu.Item>
+						</Menu.Item> */}
 
 						<Menu.Item key="echarts">
 							<Link to="/app/echarts">
@@ -96,6 +96,12 @@ class LeftSide extends React.Component {
 								<span>Video</span>
 							</Link>
 						</Menu.Item>
+						<Menu.Item key="HKVideo">
+							<Link to="/app/HKVideo">
+								<PlayCircleOutlined />
+								<span>HKVideo</span>
+							</Link>
+						</Menu.Item>
 						<Menu.Item key="openlayer">
 							<Link to="/app/openlayer">
 								<GlobalOutlined />
@@ -115,7 +121,7 @@ class LeftSide extends React.Component {
 							</Link>
 						</Menu.Item>
 
-						<Menu.Item key="keyintersection">
+						{/* <Menu.Item key="keyintersection">
 							<Link to="/app/keyintersection">
 								<AppstoreOutlined />
 								<span>KeyIntersection</span>
@@ -138,7 +144,7 @@ class LeftSide extends React.Component {
 								<AppstoreOutlined />
 								<span>TableDemo</span>
 							</Link>
-						</Menu.Item>
+						</Menu.Item> */}
 					</SubMenu>
 				</Menu>
 			</Sider>

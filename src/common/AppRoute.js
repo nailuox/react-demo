@@ -8,6 +8,7 @@ import EchartsDemo from '@components/Demo/EchartsDemo'
 import AxiosDemo from '@components/Demo/AxiosDemo'
 import FabricDemo from '@components/Demo/FabricDemo'
 import VideoDemo from '@components/Demo/VideoDemo'
+import HKVideoDemo from '@components/Demo/HKVideoDemo'
 import OpenLayerDemo from '@components/Demo/OpenLayerDemo'
 import WebsocketDemo from '@components/Demo/WebsocketDemo'
 import FortAwesomeDemo from '@components/Demo/FortAwesomeDemo'
@@ -23,23 +24,24 @@ const { Content } = Layout
 class AppRoute extends React.Component {
   render() {
     return (
-      <Content>
-        <Route path="/app/dashboard" component={Dashboard} />
-        <Route path="/app/qbcharts" component={QbChartDemo} />
-        <Route path="/app/intersection" component={IntersectionDemo} />
-        <Route path="/app/echarts" component={EchartsDemo} />
-        <Route path="/app/axios" component={AxiosDemo} />
-        <Route path="/app/fabric" component={FabricDemo} />
-        <Route path="/app/video" component={VideoDemo} />
-        <Route path="/app/openlayer" component={OpenLayerDemo} />
-        <Route path="/app/websocket" component={WebsocketDemo} />
-        <Route path="/app/fortawesome" component={FortAwesomeDemo} />
-        <Route path="/app/keyintersection" component={KeyIntersection} />
-        <Route path="/app/keyroad" component={KeyRoad} />
-        <Route path="/app/datepickerdemo" component={DatePickerDemo} />
-        <Route path="/app/table" component={TableDemo} />
-      </Content>
-    )
+			<Content>
+				<Route path="/app/dashboard" component={Dashboard} />
+				<Route path="/app/qbcharts" component={QbChartDemo} />
+				<Route path="/app/intersection" component={IntersectionDemo} />
+				<Route path="/app/echarts" component={EchartsDemo} />
+				<Route path="/app/axios" component={AxiosDemo} />
+				<Route path="/app/fabric" component={FabricDemo} />
+				<Route path="/app/video" component={VideoDemo} />
+				<Route path="/app/HKVideo" component={HKVideoDemo} />
+				<Route path="/app/openlayer" component={OpenLayerDemo} />
+				<Route path="/app/websocket" component={WebsocketDemo} />
+				<Route path="/app/fortawesome" component={FortAwesomeDemo} />
+				<Route path="/app/keyintersection" component={KeyIntersection} />
+				<Route path="/app/keyroad" component={KeyRoad} />
+				<Route path="/app/datepickerdemo" component={DatePickerDemo} />
+				<Route path="/app/table" component={TableDemo} />
+			</Content>
+		)
   }
 }
 
