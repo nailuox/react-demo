@@ -98,9 +98,9 @@ class index extends Component {
 	init = () => {
 		this.getPubKey(() => {
 			////////////////////////////////// 请自行修改以下变量值	////////////////////////////////////
-			const appkey = '28730366' //综合安防管理平台提供的appkey，必填
-			const secret = this.setEncrypt('HSZkCJpSJ7gSUYrO6wVi') //综合安防管理平台提供的secret，必填
-			const ip = '10.19.132.75' //综合安防管理平台IP地址，必填
+			const appkey = 'XXXX' //综合安防管理平台提供的appkey，必填
+			const secret = this.setEncrypt('XXXX') //综合安防管理平台提供的secret，必填
+			const ip = 'XXX' //综合安防管理平台IP地址，必填
 			const playMode = 0 //初始播放模式：0-预览，1-回放
 			const port = 443 //综合安防管理平台端口，若启用HTTPS协议，默认443
 			const snapDir = 'D:\\SnapDir' //抓图存储路径
